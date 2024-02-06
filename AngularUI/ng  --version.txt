@@ -1,0 +1,30 @@
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\ibuser>ng --version
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+
+Angular CLI: 13.3.5
+Node: 18.17.1 (Unsupported)
+Package Manager: npm 10.4.0
+OS: win32 x64
+
+Angular: undefined
+...
+
+Package                      Version
+------------------------------------------------------
+@angular-devkit/architect    0.1303.5 (cli-only)
+@angular-devkit/core         13.3.5 (cli-only)
+@angular-devkit/schematics   13.3.5 (cli-only)
+@schematics/angular          13.3.5 (cli-only)
+
+Warning: The current version of Node (18.17.1) is not supported by Angular.
+
+C:\Users\ibuser>
