@@ -1,0 +1,61 @@
+1. Download keycloak dev server distribution:
+link : https://www.keycloak.org/downloads  version: 24.0.2
+2. Download JDK 17:
+link: https://download.oracle.com/java/17/archive/jdk-17.0.10_windows-x64_bin.msi
+
+2.1 Setup Env variable for jdk 17:
+set JAVA_HOME
+C:\Program Files\Java\jdk-17
+and PATH:
+bin as well.
+
+3. Run keycloack dev server:
+Goto Keycloack extraacted folder.
+go to bin.
+open cmd there.
+Win CMD: kc.bat start-dev --http-port 8085
+after it runs enter admin user id and password.
+login as admin.
+
+4. Setup Keycloak
+ login as admin.
+ Create realm: Pathwave
+ Go to Configure:Realm setting: Login: enable user reg.: enable email as username:
+ Create keycloak client: client is app that can connect to keycloak corresponds to our Spring Boot 	application. We create it within our new realm.: Go to Manage:Clients:Create clients:
+
+Create Client:
+1st step enter any client ID: in 2nd step Capability config section enable client authentication:
+Valid redirect URIs: enter app URL which to redirect after login
+
+
+activated the client authentication, the tab "Credentials" is available for our client. Here we can now generate the secret and enter it in the application.yml / application.properties of our Spring Boot app. The key for that is spring.security.oauth2.client.registration.{provider-id}.client-secret
+
+
+Role configuration:
+
+go to realm role:Create role: Name = ROLE_USER
+
+In the Realm Settings under the tab "User registration" we now automatically assign our role to each registered user.
+Go to realm setting :user registration:Assign role:
+
+
+
+-----------------------------------------
+Below is content from keycloak-initials.docx
+-----------------------------------------
+Setting up Keyclock:
+1.	Install OpenJDK17
+	a.	Go to JDK 17 Releases (java.net)
+	b.	Download zip.
+	c.	Certutil -hashfile <file> SHA256
+	d.	JAVA_HOME – jdk dir
+	
+2.	Download Keycloak 16.1.0
+	a.	Go to Downloads 16.1.0 - Keycloak (keycloak-archive.github.io)
+3.	Get Started with keycloak:
+	a.	Extract above file
+	b.	Open terminal in that dir
+	c.	Enter following cmd there: bin\kc.bat start-dev 
+	d.	Follow this official doc: OpenJDK - Keycloak
+4.	
+

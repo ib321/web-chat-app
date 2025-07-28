@@ -25,3 +25,6 @@ replay_pid*
 
 #Eclipse workspace
 /.metadata/
+**/.classpath
+**/.project
+**/.idea
